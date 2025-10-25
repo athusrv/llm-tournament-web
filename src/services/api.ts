@@ -1,6 +1,6 @@
 import { Prompt, Result } from "@/models";
 
-const API_URL = "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export const getMatchup = async () =>
   fetch(`${API_URL}/matchup`).then(
